@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chooseStyle.Css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Catalog"></div>
+    <div class = "row">
+    <div class = "headline">
+        <h1 class = "title">
+            <center>
+            Choose your style and ambiance
+            </center>
+        </h1>
+    </div>
+    <div class = "container">
+        <div class = "containerStyle", id = "buttonGroup1"> 
+            <button data-style = "Modern" class = "styleButtonTags">Modern</button>
+            <button data-style = "Minimalist" class = "styleButtonTags">Minimalist</button>
+            <button data-style = "Japandi" class = "styleButtonTags">Japandi</button>
+            <button data-style = "Contemporary" class = "styleButtonTags">Contemporary</button>
+            <button data-style = "Scandinavian" class = "styleButtonTags">Scandinavian</button>
+            <button data-style = "ModernFarmhouse" class = "styleButtonTags">Modern Farmhouse</button>
+            <button data-style = "Coastal" class = "styleButtonTags">Coastal</button>
+            <button data-style = "ModernLuxury" class = "styleButtonTags">Modern Luxury</button>
+            <button data-style = "Industrial" class = "styleButtonTags">Industrial</button>
+        </div>
+        <div class = "containerTone", id = "buttonGroup2">
+            <button data-style = "WarmNeutral" class = "styleButtonTags">Warm Neutral</button>
+            <button data-style = "Neutral" class = "styleButtonTags">Neutral</button>
+            <button data-style = "CoolNeutral" class = "styleButtonTags">Cool Neutral</button>
+            <button data-style = "Earthy" class = "styleButtonTags">Earthy</button>
+            <button data-style = "DarkAndMoody" class = "styleButtonTags">Dark and Moody</button>
+            <button data-style = "Colorful" class = "styleButtonTags">Colorful</button>
+        </div>
+    </div>
+    <div class = "budgetContainer">
+        <div class = "headline">
+            <h1>
+                <center>
+                Input Your Budget
+                </center>
+            </h1>
+        </div>
+        <div class = "budgetInput">
+            <center>
+                <input id = "budget" type="number" placeholder = "Enter your Budget">
+            </center>
+        </div>
+
+        <div class = "headline optimizationHeadline">
+            <h1>
+                <center>
+                What are you optimizing
+                </center>
+            </h1>
+        </div>
+        <div class = "budgetInput optimizationContainer">
+            <center>
+                <select id="optimization" name="optimization">
+                    <option value="">Choose a priority</option>
+                    <option value="space">Make the most of the space</option>
+                    <option value="appearance">Looks and style</option>
+                    <option value="function">Everyday usefulness</option>
+                    <option value="budget">Stay within budget</option>
+                </select>
+            </center>
+            <center>
+                <select id="roomType">
+                    <option value="">Choose a room type</option>
+                    <option value="bedroom">Bedroom</option>
+                    <option value="living room">Living room</option>
+                    <option value="home office">Home office</option>
+                    <option value="dining room">Dining room</option>
+                    <option value="studio apartment">Studio apartment</option>
+                </select>
+            </center>
+        </div>
+    </div>
+</div>
+    <a href="index.html">
+        <img src="nextButton.png" alt="Next page" class="nextPageImage">
+    </a>
+
+
+        <script src = "chooseStyle.js"></script>
+        <script src = "Catalog.js" type = "module"></script>
+        <!--<script src="catalogCreation.js" type="module"></script>-->
+</body>
+</html>

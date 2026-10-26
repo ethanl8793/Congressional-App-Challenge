@@ -1,0 +1,244 @@
+
+
+/* This part is for the viewbox*/
+body { 
+  background-color: bisque;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+.viewbox{
+  display: block;
+  width: 100%;
+  height:auto;
+}
+.containerForHeadline{
+  position: absolute;
+  width:350px;
+  height:80px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 20px
+}
+.headline{
+  position:relative;
+  margin-top:25px;
+  margin-left:15px;
+  
+}
+.container{
+  position: relative;
+  background-color: #737070c5;
+  padding: 45px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  align-self: flex-start; 
+  margin-top:15px;
+  margin-left:20px;
+}
+.canvasButtonsPosition{
+  position: absolute;
+  top:6px;
+  left: 12px;
+  display: flex;
+  gap: 8px
+}
+.rect{
+  fill: #3f423e;
+
+}
+.row{
+  display:flex;
+  gap:100px;
+  margin-left:10%;
+}
+.circleGrid{
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.circleGrid.-visible{
+  opacity: 1;
+}
+.restartButton{
+  width: 35px;
+  height: 35px;
+  padding: 0; /* makes it clearer*/
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  
+}
+.restartButton img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #FFFFF0;
+  border-radius: 10px;
+}
+.submitButton{
+  width: 50px;
+  height: 35px;
+  padding: 0; /* makes it clearer*/
+  border-radius: 10px;
+  border: none;
+  background-color: #FFFFF0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.wallDimension{
+  stroke:#ffffff80;
+  transition: stroke 0.3s ease-in;
+}
+.wallDimension.active{
+  stroke : #339ce780;
+}
+.drawnwalls{
+  pointer-events: none;
+  stroke: #ffffff80;
+  stroke-width: .75px;
+}
+.polygon{
+  pointer-events: none;
+  stroke: #ffffff80;
+  stroke-width: .75px;
+  fill: #ffffff80;
+}
+#frameText{
+  position:absolute;
+  background-color:aliceblue;
+  max-width: 250px;
+  width: 100%;  
+  height: 150px;
+  border-radius:20px;
+  text-align: center;
+  align-content:center;
+}
+#frameText > button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+}
+#overlayBox{
+  position: fixed;
+  width:100vw;
+  height:100vh;
+  background-color: rgba(0, 0, 0, 0.58);
+  /** IDK if i want the background to be transparent or black*/
+  inset: 0;
+  justify-content: flex-start;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1000;
+
+}
+.denyConfirmOrResetButtons{
+padding: 5px 10px;
+color: white;
+background-color: #3f423e;
+border-radius: 10px
+
+/** MAYBE add like a transform: scale(1.2) for like when i hover*/
+/** maybe add that to like everything whenever i hover over any button*/
+}
+.buttonZoomIn:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+#inputDimensionsContainer{
+  position:relative;
+  max-width: 500px;
+  width: 450px;
+  height: 400px;
+  background-color: #3f423e;
+  border-radius: 20px;
+  box-sizing: border-box; /** calculates box so that the width and
+  height will include content, padding, and borders.*/
+  padding: 9px 0 0px 0; 
+  margin-top:12.5%;
+}
+.expandableContainer{
+  background-color: white;
+  max-width: 500px;
+  width: 450px;
+  height: 310px;
+  overflow-y: scroll;
+  
+}
+.buttonWrap{
+  display:flex;
+}
+#submitDimensionsButton{
+  margin-left: 40%;
+  max-width:90px;
+  width: 90px;
+  height: 30px;
+  border-radius:10px;
+  margin-top: 5px;
+  
+}
+#submitDimensionsButton:hover{
+  cursor: pointer;
+  transform:scale(1.2);
+}
+.dropDownUnits{
+  margin-right:auto ;
+  margin-left: auto;
+  max-width:90px;
+  width: 90px;
+  height: 30px;
+  border-radius:10px;
+  margin-bottom: 5px;
+
+}
+#heightIndicator{
+  height:25px;
+  width: 90px;
+  margin-right: auto;
+  margin-left: auto + 5px;
+  margin-bottom:10px;
+
+  border-radius: 10px;
+}
+/*gap for spacing between the catalog, button, and canvas;
+ margin to push one item around; align-items for vertical 
+ alignment; order to rearrange. Those are all size-aware
+ for free. Every translate you add now is guaranteed rework.*/
+
+
+.wallDimensionContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+  margin-left:15%;
+}
+.inputLineDimension {
+  width: 100px;
+  box-sizing: border-box;
+}
+#drawWindow{
+  border-radius: 10px;
+}
+#drawDoor{
+  border-radius: 10px;
+}
+.nextPageImage{
+  position:absolute;
+    width: 100px;
+    height: 70px;
+    border-radius: 30%;
+    object-fit: fill;
+  margin-left:22.5%;
+  bottom:70px;
+}

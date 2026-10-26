@@ -1,0 +1,136 @@
+
+
+body { 
+  background-color: bisque;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+/*
+#Catalog{
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  overflow-y: auto; 
+  border-radius: 20px;
+  transform: translateX(15px), translateY(25%);
+  
+}
+#Catalog img {
+  width: 95%; 
+  height: auto;
+  border: 5px solid white;
+
+}
+#Catalog img:hover{
+  cursor:pointer;
+}
+
+p { white-space: pre-line; }
+*/
+
+.descriptionList {
+  position:fixed;
+  display: none;
+}
+.headline{
+  position: absolute;
+  width:500px;
+  height:80px;
+  background-color: white;
+  margin-left:8%;
+  border-radius:20px;
+}
+
+.container{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+.containerStyle,
+.containerTone{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 200px;
+  background-color:rgb(99, 98, 98);
+  padding-top:20px;
+  padding-bottom: 20px;
+  padding-right:10px;
+  padding-left:10px;
+  border-radius: 20px;
+  margin-top: 10%;
+  margin-right:5%;
+}
+.styleButtonTags{
+  border-radius:10px;
+  height:30px;
+}
+.styleButtonTags{
+  border-radius:10px;
+  height:30px;
+}
+.styleButtonTags:hover{
+  transform:scale(1.1);
+}
+.styleButtonTags.selected {
+  background-color: #aecce4;
+  border: 1.5px solid #506778;
+  font-weight: bold;
+}
+.row{
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top:2.5%;
+}
+.budgetInput{
+  position:relative;
+  width:400px;
+  height:100px;
+  background-color: rgb(99, 98, 98);
+  margin-left:40%;
+  margin-top:28.5%;
+  border-radius: 20px;
+}
+#budget,#optimization{
+  position: relative;
+  width:300px;
+  height:25px;
+  border-radius: 10px;
+}
+#budget{
+  margin-top:7.5%;
+}
+#optimization{
+  margin-top: 3.5%;
+}
+#roomType{
+  position: relative;
+  width:300px;
+  height:25px;
+  border-radius: 10px;
+  margin-top: 5%;
+
+}
+.optimizationContainer {
+  margin-top: 150px;
+}
+.optimizationHeadline{
+  margin-top: 35px
+}
+.nextPageImage{
+  position:absolute;
+    width: 100px;
+    height: 70px;
+    border-radius: 30%;
+    object-fit: fill;
+  margin-left:70%;
+}

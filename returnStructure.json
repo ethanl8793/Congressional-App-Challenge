@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "design_name": {"type":"string"},
+    "user_goal": {"type":"string"},
+    "layout_plan": {"type":"string"},
+    "modifications": {"type":"array","items":{"type":"string"}},
+    "furniture_recommendations": {"type":"array","items":{"type":"string"}},
+    "storage_recommendations": {"type":"array","items":{"type":"string"}},
+    "estimated_storage_improvements": {"type":"string"},
+    "image_prompt": {"type":"string"},
+    "potential_issues": {"type":"array","items":{"type":"string"}},
+    "assumptions": {"type":"array","items":{"type":"string"}},
+    "original_request_feasible": {"type":"boolean"},
+    "revised_design_status": {"type":"string","enum":["feasible","concept_only","not_feasible"]},
+    "requires_clarification": {"type":"boolean"},
+    "can_generate_concept_image": {"type":"boolean"},
+    "catalog_recommendations": {"type":"array","items":{"type":"object","properties":{"product_id":{"type":"string"},"variant_id":{"type":"string"},"reason":{"type":"string"}},"required":["product_id","variant_id","reason"]}},
+    "external_suggestions": { "type": "array", "items": { "type": "object", "properties": { "item_name": { "type": "string" }, "category": { "type": "string" }, "reason": { "type": "string" }, "suggested_search_terms": { "type": "string" }, "selected": { "type": "boolean" } }, "required": [ "item_name", "category", "reason", "suggested_search_terms", "selected" ], "additionalProperties": false } }
+  },
+  "required": ["design_name","user_goal","layout_plan","modifications","furniture_recommendations","storage_recommendations","estimated_storage_improvements","image_prompt","potential_issues","assumptions","original_request_feasible","revised_design_status","requires_clarification","can_generate_concept_image","catalog_recommendations","external_suggestions"]
+}
